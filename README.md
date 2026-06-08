@@ -17,4 +17,4 @@ A Flask web application containerized using Docker.
 ![Container](screenshots/Container.png)
 
 ### Application Output
-![Browser](screenshots/browser.png)
+![Browser](screenshots/brower.png)
