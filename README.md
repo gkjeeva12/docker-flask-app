@@ -11,10 +11,10 @@ A Flask web application containerized using Docker.
 ## Screenshots
 
 ### Docker Build
-![Docker Build](screenshots/build.png)
+![Docker Build](screenshots/image.png)
 
 ### Running Container
-![Container](screenshots/container.png)
+![Container](screenshots/Container.png)
 
 ### Application Output
 ![Browser](screenshots/browser.png)
