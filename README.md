@@ -18,27 +18,84 @@ DockerFlaskApp/
 ├── README.md
 └── screenshots/
 
-## Setup Instructions
+## Steps Performed
 
-### 1. Clone the Repository
+### 1. Created the project folder
 
-git clone <repository-url>
+```text
+DockerFlaskApp
+```
 
-### 2. Navigate to the Project Folder
+### 2. Created the following files
 
-cd DockerFlaskApp
+```text
+app.py
+requirements.txt
+Dockerfile
+```
 
-### 3. Build Docker Image
+### 3. Added Flask application code in app.py
 
+### 4. Added dependency in requirements.txt
+
+```text
+Flask==3.0.0
+```
+
+### 5. Created Dockerfile
+
+```dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+```
+
+### 6. Built the Docker image
+
+```bash
 docker build -t flask-app .
+```
 
-### 4. Run Docker Container
+### 7. Verified the image
 
+```bash
+docker images
+```
+
+### 8. Ran the Docker container
+
+```bash
 docker run -d -p 5000:5000 flask-app
+```
 
-### 5. Access Application
+### 9. Verified the running container
 
+```bash
+docker ps
+```
+
+### 10. Accessed the application
+
+Open:
+
+```text
 http://localhost:5000
+```
+
+### Output
+
+The Flask application was successfully deployed inside a Docker container and accessed through the browser.
+
 
 ## Screenshots
 
